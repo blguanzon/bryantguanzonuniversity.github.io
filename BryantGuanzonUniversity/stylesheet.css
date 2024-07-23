@@ -1,0 +1,434 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+/* Header Section */
+header {
+    background-color: #234391;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Center the header */
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    width: auto; /* Set the width of your logo */
+    height: 80px; /* Maintain the aspect ratio */
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bolder;
+    font-size: larger;
+    margin: 20px;
+}
+
+nav a:hover {           
+    color: #FFF;
+    text-shadow: 0 0 5px #222;
+    transform: scale(1.2);
+}
+
+.sticky-header {
+    display: none; /* Ensures display to stay hidden when scroll is on top */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #234391;
+    color: #FFF;
+    padding: 8px 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1705px; /* Ensures header size to avoid overlap */
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky-header img {
+    width: auto; /* Set the width of your logo */
+    height: 50px; /* Maintain the aspect ratio */
+}
+
+/* Hero Section */
+.hero {
+    background: url(hero_banner.png) center/cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FBFBFF;
+    text-align: center;
+    padding: 325px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the overlay color and opacity */
+    backdrop-filter: blur(4px); /* Adjust the blur effect */
+    z-index: 0;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 60px #222;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 60px #222;
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.hero-button {
+    background-color: #f7931e; /* Make background transparent */
+    color: #FFF; /* Use the original background color for text */
+    border: 2px solid #f7931e; /* Add a border with the original background color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+
+.hero-button:hover {
+    border: 4px solid #f7931e;
+    background-color: #f7931e; /* Revert to original background color on hover */
+    color: #FFF; /* Keep the text color as it was */
+    font-weight: bold;
+    transform: scaleY(1);
+}
+
+.hero-2 {
+    background: url(hero_banner.png) center/cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FBFBFF;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-2 h2 {
+    margin: 0px 200px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 60px #222;
+}
+
+/* Container */
+.container {
+    max-width: 1900px;
+    margin: auto;
+}
+
+.container a {
+    text-decoration: none;
+    color: #FFF;
+    margin: 20px;
+}
+
+.container h1,h2,h3,h4,h5 {
+    font-family: 'ABeeZee', Helvetica, Arial, Lucida, sans-serif;
+    font-size: x-large;
+}
+
+.container p {
+    font-family: 'Actor', Helvetica, Arial, Lucida, sans-serif;
+    font-size: larger;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.container img {
+    margin: auto;
+}
+
+.container-button {
+    background-color: #234391; /* Make background transparent */
+    color: #FFF; /* Use the original background color for text */
+    border: 2px solid #234391; /* Add a border with the original background color */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+
+.container-button:hover {
+    border: 4px solid #234391;
+    background-color: #234391; /* Revert to original background color on hover */
+    color: #FFF; /* Keep the text color as it was */
+    font-weight: bold;
+    transform: scaleY(1);
+}
+
+.content {
+    margin: auto;
+}
+
+.content-boxes {
+	flex: 1;
+	max-width: 300px;
+	margin: 0 10px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.content-boxes:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.content-box-images {
+	max-width: 90%;
+	height: auto;
+	border-bottom: 1px solid #ccc;
+}
+
+.content-box-details {
+	padding: 20px;
+}
+
+.content-box-details h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+
+.content-box-details p {
+	margin: 0;
+	color: #555;
+}
+
+.content-grid-1c-3r {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.content-grid-1c-3r h1 {
+    color: #ed1c24;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.content-grid-1c-3r hr {
+    border: 3px solid #f7931e;
+    max-width: 500px;
+    margin: 20px 0px;
+}
+
+.content-grid-1c-3r ul {
+    padding: 20px 50px;
+    background-color: #234391;
+    border: 2px solid #234391;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.content-grid-1c-3r li{
+    margin: auto;
+    font-size: 2rem;
+    color: #FFF;
+}    
+
+.content-grid-2c-1r {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content-grid-2c-1r p{
+    width: 50%;
+}
+
+.content-grid-2c-1r h4{
+    color: #234391;
+    font-weight: bold;
+    text-align: left;
+}
+
+.content-grid-2c-1r img {
+    max-width: 1210px;
+    height: auto;
+    
+}
+
+.content-grid-2c-1r-2 {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.content-grid-2c-1r-2 p{
+    margin: 0px 400px;
+    width: 53%;
+}
+
+.content-grid-2c-1r-2 h4{
+    margin: 40px 400px;
+    width: 50%;
+    color: #234391;
+    font-weight: bold;
+    text-align: left;
+}
+
+.content-grid-2c-1r-2 img {
+    max-width: 1210px;
+    height: auto;
+    
+}
+
+.content-grid-2c-1r-2 .container-button {
+    margin: 40px 400px;
+    width: 40%;
+}
+
+.content-grid-4c-1r {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.content-grid-3c-1r {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #FFF;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    max-width: 300px;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: #FFF;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.footer-column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
